@@ -1,6 +1,6 @@
 # Modularisation d'Ontologie MMC
 
-Ce projet implémente une technique de partitionnement d'une ontologie basé sur un Modèle de Markov Caché (MMC).
+	Ce projet implémente une technique de partitionnement d'une ontologie basé sur un Modèle de Markov Caché (MMC).
 
 ## Description
 
@@ -9,14 +9,43 @@ Il est décomposé en deux fichiers :
 	- "chargement_fichier.py" : pour l'extraction des triplets RDF à partir des requêtes SPARQL que une ontologie.
 	- "modularisation_Ontologie_MMC.py" : pour l'exploitation des triplets RDF afin de générer les partitions de l'ontologie.
 
+## Organisation du projet
+
+Le projet est organisé comme suit:
+	-- OntologyModularization (Dosiier)
+		-- Tests (Dosiier)
+			-- Ontologies (Dosiier)
+			-- Sorties (Dosiier)
+				-- Clusters (Dosiier)
+					-- Chebyshev (Dosiier)
+					-- Euclidienne (Dosiier)
+					-- Manhattan (Dosiier)
+				-- Elbow (Dosiier)
+					-- Chebyshev (Dosiier)
+					-- Euclidienne (Dosiier)
+					-- Manhattan (Dosiier)
+				-- Etiquettes (Dosiier)
+				-- Metriques (Dosiier)
+				-- Nuage (Dosiier)
+					-- Chebyshev (Dosiier)
+					-- Euclidienne (Dosiier)
+					-- Manhattan (Dosiier)
+				-- Vecteurs (Dosiier)
+			-- Triplets (Dosiier)
+		-- CodeSource (Dosiier)
+			-- chargement_ontologie (fichier python)
+			-- modularisation_Ontology_MMC (fichier python)
+
+
 ## Fonctionnalités principales
 
 - Extraction des triplets RDF d'une ontolpogie
 - Traitement de fichiers de triplets RDF
 - Construction de chaînes de Markov pour représenter les relations
 - Initialisation et entraînement des Modèles de Markov Cachés
-- Construction des vecteurs et partitionnement des points 
-- Calcul de distances intra-module et inter-module
+- Construction des vecteurs et partitionnement des points avec K-means (variation de mesures de distances)
+- Calcul de distances intra-module et inter-module ainsi que la silhouette
+- Génération des nuages des points
 
 ## Prérequis
 

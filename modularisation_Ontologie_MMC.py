@@ -422,6 +422,9 @@ vecteurs = np.hstack((mmc.A_train[:-1,:-1], mmc.B_train[:-1,:-1]))              
     
 np.savetxt(vect, vecteurs, delimiter="\t", fmt="%f")                                 # Enregistrement des vecteurs
 
+
+
+
 inertias = []                                                                        # Stocke les inerties pour chaque valeur de k
 K_range = range(1, int(len(vecteurs)/10))                                            # Tester de 1 à 10 clusters
 # recherche du nombre de clusters optimal avec la méthode d'elbow
